@@ -1,4 +1,5 @@
 from django.db import models
+from django.contrib.auth.models import User
 import os
 
 class Post(models.Model):
@@ -9,10 +10,10 @@ class Post(models.Model):
     file_upload = models.FileField(upload_to='blog/files/%Y/%m/%d/', blank=True)
 
     create_at = models.DateTimeField(auto_now_add=True) #작성일
-    #author #작성자 정보
+    author = models.ForeignKey(User, null=True, on_delete=models.SET_NULL) #작성자 정보, 작성자가 삭제될 떄, 포스트 작성자명 NULL로
 
     def __str__(self):
-        return f'[{self.pk}]{self.title}' #해당 포스트의 pk 값, 해당 포스트의 title 값
+        return f'[{self.pk}]{self.title} :: {self.author}'  #해당 포스트의 pk 값, 해당 포스트의 title 값
 
     def get_absolute_url(self):
         return f'/blog/{self.pk}/'
