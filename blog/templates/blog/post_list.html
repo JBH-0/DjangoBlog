@@ -83,7 +83,7 @@
         <div class="row">
             <div class="col-md-8 col-lg-9">
                 <h1>Blog</h1>
-
+                {%if post_list.exists%}
                 {% for p in post_list %}
                 <!-- Blog Post -->
                 <div class="card mb-4">
@@ -92,7 +92,7 @@
                     {% endif %}
                     <div class="card-body">
                         <h2 class="card-title">{{p.title}}</h2>
-                        <p class="card-text">{{p.content}}</p>
+                        <p class="card-text">{{p.content | truncatewords:45}}</p>
                         <a href="{{p.get_absolute_url}}" class="btn btn-primary">Read More &rarr;</a>
                     </div>
                     <div class="card-footer text-muted">
@@ -101,6 +101,9 @@
                     </div>
                 </div>
                 {% endfor %}
+                {%else%}
+                <h3>아직 게시물이 없습니다.</h3>
+                {%endif%}
 
                 <!-- Pagination -->
                 <ul class="pagination justify-content-center mb-4">
