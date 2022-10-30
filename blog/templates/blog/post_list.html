@@ -7,6 +7,7 @@
         </a>
     {% endif %}
     <h1>Blog</h1>
+        {% if search_info %}<small class="text-muted">{{ search_info }}</small>{% endif %}
         {%if post_list.exists%}
             {% for p in post_list %}
             <!-- Blog Post -->
