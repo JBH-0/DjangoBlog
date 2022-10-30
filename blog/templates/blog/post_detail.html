@@ -13,13 +13,21 @@
             <h1 class="fw-bolder mb-1">{{post.title}}</h1>
             <!-- Post Author -->
             <p lcass="lead">by <a href="#">{{post.author}}</a></p> 
+
+            <hr>
+
+        {% if user.is_authenticated and user == post.author %}
+            <a class="btn btn-info btn-sm float-right" href="/blog/update_post/{{post.pk}}/" role="button">
+                <i class="fas fa-pen"></i>&nbsp;&nbsp;Edit Post
+            </a>
+        {% endif %}
             <!-- Post meta content-->
             <div class="text-muted fst-italic mb-2">{{post.create_at}}</div>
             <!-- Post categories
             <a class="badge bg-secondary text-decoration-none link-light" href="#!">Web Design</a>
             <a class="badge bg-secondary text-decoration-none link-light" href="#!">Freebies</a>-->
         </header>
-        <hr>
+        
         <!-- Preview image figure-->
         <figure class="mb-4">
             {% if post.head_image %}
