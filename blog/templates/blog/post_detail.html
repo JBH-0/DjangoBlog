@@ -40,7 +40,7 @@
                             <!-- Post title-->
                             <h1 class="fw-bolder mb-1">{{post.title}}</h1>
                             <!-- Post Author -->
-                            <p lcass=""lead">by <a href="#">작성자명</a></p> 
+                            <p lcass="lead">by <a href="#">작성자명</a></p> 
                             <!-- Post meta content-->
                             <div class="text-muted fst-italic mb-2">{{post.create_at}}</div>
                             <!-- Post categories
@@ -49,7 +49,11 @@
                         </header>
                         <hr>
                         <!-- Preview image figure-->
-                        <figure class="mb-4"><img class="img-fluid rounded" src="https://dummyimage.com/900x400/ced4da/6c757d.jpg" alt="..." /></figure>
+                        <figure class="mb-4">
+                            {% if post.head_image %}
+                            <img class="img-fluid rounded" src="{{post.head_image.url}}" alt="{{post.title}} head_imaged" />
+                            {% endif %}
+                        </figure>
                         <hr>
                         <!-- Post content-->
                         <p>{{post.content}}</p>>

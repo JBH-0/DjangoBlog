@@ -4,6 +4,9 @@ class Post(models.Model):
     title = models.CharField(max_length=30) #제목
     content = models.TextField() #내용
 
+    head_image = models.ImageField(upload_to='blog/images/%Y/%m/%d/', blank=True)
+    file_upload = models.FileField(upload_to='blog/files/%Y/%m/%d/', blank=True)
+
     create_at = models.DateTimeField(auto_now_add=True) #작성일
     #author #작성자 정보
 
