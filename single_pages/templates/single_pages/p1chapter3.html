@@ -1,38 +1,125 @@
 {% load static %}
 <div class="col-lg-8">
-    <h1>한국 반도체 산업의 문제점</h1>
-    <br/>
-    <p class="lead">
-        <b>첫번째, 시스템 반도체 분야의 산업 경쟁력은 열세에 있다.</b>
-    </p>
-    하지만 시스템 반도체 분야는 2.9%로,
+    <h4>1. 공산진영에 설 경우</h4>
+
+    &nbsp;&nbsp;&nbsp;&nbsp;UN comtrade에서 가져온 통계 자료 에 따르면 세계 반도체 수입의 17년부터 21년까지의 5년간 연평균 성장률은 9.95%이다.
+    이와 같은 속도로 26년까지 일정하게 성장한다고 가정했을 때 세계 반도체 수입 규모는 약 1조 2270억달러이다.
     <br><br>
-<div style="font-family: 'Helvetica Neue', Arial; font-size: 16px">
-    <div id="chart-8">{{ output_8|safe }}</div>
+
+    <div style="font-family: 'Helvetica Neue', Arial; font-size: 16px">
+        <div id="chart-9">{{ output_9|safe }}</div>
+        <br>
+    </div>
+
+    &nbsp;&nbsp;&nbsp;&nbsp;중국 반도체 수입 규모도 같은 방식으로 구해보면, 중국 반도체 수입의 17년부터 21년까지의 5년간 연평균 성장률은 9.92%인데,
+    이를 이용한 26년의 중국 반도체 수입 규모는 약 5290억달러이다.
+    <br><br>
+
+    <div style="font-family: 'Helvetica Neue', Arial; font-size: 16px">
+        <div id="chart-10">{{ output_10|safe }}</div>
+        <br>
+    </div>
+
+    &nbsp;&nbsp;&nbsp;&nbsp;이를 통해 중국의 반도체 시장은 세계 시장의 약 43%에 이르는 규모를 가진 것을 알 있다. 이는 놀랍도록 큰 수치이다.
+    제2장에서 언급한 바와 같이 중국의 반도체 자급력 육성 계획은 실적이 부진한 것으로 나타났고 현재 미국의 철저한 기술통제정책을 볼 때
+    중국 연구진들의 활약이 있지 않은 이상 자급력은 26년에도 과반수를 넘지 못할 것으로 보인다. 따라서 중국은 외부에서 반도체를 팔아주는 공급자가 절실히 필요하다.
+    만일 중국 수요의 대부분을 한국 기업이 독과점 하는 것이 가능하다면 한국기업은 세계 1위의 매출을 기록할 수 있을 것으로 보인다.
+    <br><br>
+
+    &nbsp;&nbsp;&nbsp;&nbsp;그러나 이러한 간단한 수치만으로 한국이 중국의 편에 서는 것이 좋다고 생각할 수 없다.
+    다음 표 는 한국이 소재를 수입하는 상위 5개 국가를 나타낸 표인데 중국의 비중은 20%에 불과하다.
+    즉, 한국이 자유진영의 공급망에서 벗어나 공산진영에 섰을 때 중국의 20%를 제외한 나머지 80%를 공급받지 못하게 된다는 의미이다.
+    <br><br>
+
+    <table width="700" height="450" border="1" align="center" bgcolor="#f8f8f8" rules="All">
+        <tr align="center" rules="None">
+            <td align="center" bgcolor="#FFFFE0"><b>국가</b></td>
+            <td align="center" bgcolor="#FFFFE0"><b>금액(달러)</b></td>
+            <td align="center" bgcolor="#FFFFE0"><b>비중(%)</b></td>
+        </tr>
+        <tr>
+            <td align="center">일본</td>
+            <td align="center">3,554,368,008</td>
+            <td align="center">38.5</td>
+        <tr>
+            <td align="center">중국</td>
+            <td align="center">1,888,758,573</td>
+            <td align="center">20.5</td>
+        </tr> 
+        <tr>
+            <td align="center">미국</td>
+            <td align="center">1,046,377,247</td>
+            <td align="center">11.3</td>
+        </tr> 
+        <tr>
+            <td align="center">대만</td>
+            <td align="center">770,015,155</td>
+            <td align="center">8.3</td>
+        </tr> 
+        <tr>
+            <td align="center">베트남</td>
+            <td align="center">373,849,446</td>
+            <td align="center">4.1</td>
+        </tr> 
+        <tr>
+            <td align="center">합계</td>
+            <td align="center">7,633,368,429</td>
+            <td align="center">82.8</td>
+        </tr> 
+    </table>
     <br>
-</div>
 
-<div style="font-family: 'Helvetica Neue', Arial; font-size: 16px">
-    <div id="chart-9">{{ output_9|safe }}</div>
-    <br>
-</div>
+    &nbsp;&nbsp;&nbsp;&nbsp;이러한 문제는 반도체 제조장비에서도 마찬가지이다. 미국은 이미 네덜란드 ASML과 협의하여 ASML만이 유일 생산하는 7나노미터 이하의
+    미세공정에서 필요한 EUV 장비를 중국에 수출하는 것을 금지시킨 바 있다. 또한 여러 반도체제조장비를 생산한는 일본기업들과도 중국에 대한 수출통제의
+    협조를 구하기 위해 협의중에 있다 . 전자 빔 마스크 라이터(EB Mask Writer) 판매 점유율 90%에 이르는 NFT, 코터(Coater)와 디벨로퍼(Developer) 점유율 90%의
+    도쿄일렉트론, 다이싱 절단기계(Dicing Saw) 점유율 70~80%의 DISCO 등등이 대표적이다.
+    <br><br>
 
-<div style="font-family: 'Helvetica Neue', Arial; font-size: 16px">
-    <div id="chart-10">{{ output_10|safe }}</div>
-    <br>
-</div>
+    <h4>2. 자유진영에 설 경우</h4>
 
+    &nbsp;&nbsp;&nbsp;&nbsp;먼저 중국에 대한 한국의 수출을 알아보도록 하자. 다음은 이전과 같은 방법으로 한국의 반도체 수출과 중국에 대한 수출을 구하여 나타낸 것이며
+    26년 기준 중국 수출 비중은 21%이다.
+    <br><br>
 
-<div style="font-family: 'Helvetica Neue', Arial; font-size: 16px">
-    <div id="chart-11">{{ output_11|safe }}</div>
-    <br>
-</div>
+    <div style="font-family: 'Helvetica Neue', Arial; font-size: 16px">
+        <div id="chart-8">{{ output_8|safe }}</div>
+        <br>
+    </div>
 
-<div style="font-family: 'Helvetica Neue', Arial; font-size: 16px">
-    <div id="chart-12">{{ output_12|safe }}</div>
-    <br>
-</div>
+    &nbsp;&nbsp;&nbsp;&nbsp;즉, 중국에 수출을 못하여 한국이 보게 될 직접적인 손해는 580억달러이며 한국 반도체 산업 규모의 20%를 잃는 것이라 할 수 있다.
+    <br><br>
 
-<br><br>
-R&D 분야의......
-<br><br><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;또한 전체 40%에 이르는 중국의 반도체 수요를 시장에서 배제함으로써 발생하는 문제가 있다.
+    중국이 수요에서는 아주 많은 비중을 차지했지만 공급에서는 그렇지 못할 것으로 보인다.
+    중국 반도체 수출의 17년부터 21년까지 연평균 성장률은 11.96%로 이를 이용한 26년 기준 중국 수출은 2830억달러이고, 그 비중은 수입의 53%이다.
+    <br><br>
+
+    <div style="font-family: 'Helvetica Neue', Arial; font-size: 16px">
+        <div id="chart-11">{{ output_11|safe }}</div>
+        <br>
+    </div>
+
+    &nbsp;&nbsp;&nbsp;&nbsp;즉, 중국을 시장에서 배제함으로써 줄어들게 될 수요는 공급보다 약 2배 가까이 많으며 따라서 반도체의 가격은 하락할 것이다.
+    <br><br>
+
+    <h4>3. 소결론</h4>
+
+    &nbsp;&nbsp;&nbsp;&nbsp;한국이 공산진영에 참여할 경우 중국의 막대한 수요를 한국기업이 독점할 수 있을 것으로 보이지만 자유진영으로부터
+    소부장(소재, 부품, 장비)수출 통제를 당하게 되면 중국의 수요가 무상하게 반도체 생산이 어렵게 될 가능성이 높다. 이럴 경우 중국과 협조하면서
+    자체적인 소부장 기술 개발을 해야할 것으로 보이는데, 그것이 가능하더라도 개발에 성공하여 양산하기까지 어느 정도의 시간이 걸릴지 미지수이다.
+    <br><br>
+
+    &nbsp;&nbsp;&nbsp;&nbsp;반면에 한국이 자유진영에 참여할 경우 반도체를 생산하는 데에 아무런 장애가 없을 것이다.
+    그러나 중국이라는 거대한 수요자가 떨어져나가 세계 반도체시장이 이등분 됨과 동시에 미국과 대만 등 반도체 강자들과 경쟁을 해야한다.
+    특히 한국이 경쟁력을 가지고 있는 메모리 반도체는 ‘선 생산, 후 주문’의 특성을 가지고 있어 수요와 공급의 불균형에서 큰 가격변동을 보인다.
+    <br><br>
+
+    &nbsp;&nbsp;&nbsp;&nbsp;두 경우 모두 장단이 있으나 둘 중 하나를 선택해야 하는 상황이라면 자유진영을 선택하는 것이 옳다고 할 수 있겠다.
+    후자의 경우라면 높은 수준의 기술과 메모리 반도체에서의 강한 경쟁력으로 유리하다고 할 수 있지만 전자에서는 소부장을 공급받지 못해 얻게 되는 리스크가 매우 크기 때문이다. 
+    <br><br>
+
+    <h4>4. 연구방법의 한계점</h4>
+
+    &nbsp;&nbsp;&nbsp;&nbsp;그러나 이는 다소 억지스러운 가정을 전제로 한 결론이며 실제로는 공급망이 100% 분리가 되지 않고 낮은 기술 수준의 반도체를
+    거래하는 정도의 교류는 있을 것이다. 다만, 이번 연구를 통해 정책 또는 기업의 운영에 있어 투자, 진출 방향을 제시하는 것에 의의를 둔다.
+    <br><br>
