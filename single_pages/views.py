@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from blog.models import Post
 from single_pages.models import MSemi, SSemi, Fabless, KorSemiShare, SemiShare, Research, SemiExport, KorSemiExport, WorldSemiImport, ChinaSemiImport, ChiSemiExport, WorldSemiImExport
+from single_pages.models import Topic2020, Topic2021, Topic2022, TopicChange
 # from single_pages.models import Movevixlibor
 
 from collections import OrderedDict
@@ -17,7 +18,7 @@ def landing(request):
         }
     )
 
-def about_me(request):
+def paper(request):
     #1
     #chartdata 선언
     dataSource = OrderedDict()
@@ -360,9 +361,113 @@ def about_me(request):
     WorldSemiImExport2D = FusionCharts("mscolumn3dlinedy", "ex12", "600", "400", "chart-12", "json", dataSource)
 
 
-
-
     context = {'output': pie2D.render(),'output_2': Spie2D.render(), 'output_3': Fabless2D.render(), 'output_4': KorSemiShare2D.render(),
     'output_5': SemiShare2D.render(), 'output_6': SemiExport2D.render(), 'output_7': Research2D.render(), 'output_8': KorSemiExport2D.render(),
     'output_9': WorldSemiImport2D.render(), 'output_10': ChinaSemiImport2D.render(), 'output_11': ChiSemiExport2D.render(), 'output_12': WorldSemiImExport2D.render()}
-    return render(request, 'single_pages/about_me.html', context) #render
+    return render(request, 'single_pages/paper.html', context) #render
+
+
+def paper2(request):
+    #1
+    #chartdata 선언
+    dataSource = OrderedDict()
+    dataSource["data"] = [] #chartdata는 json형식이다.
+    #data 값 넣기
+    class_object =Topic2020.objects.all()
+    for co in class_object:
+        dataSource["data"].append({"label": co.info, "value": co.status})
+    chartConfig = OrderedDict()
+    chartConfig["caption"] = "2020 정보원 중요도" #제목
+    chartConfig["subCaption"] = "2020년" #소제목
+    chartConfig["yaxisname"] = "중요도"
+    chartConfig["aligncaptionwithcanvas"] = "0"
+    chartConfig["plottooltext"] ="<b>$dataValue</b> leads received"
+    chartConfig["theme"] = "fusion" #테마
+    #그래프 특징 설정
+    dataSource["chart"] = chartConfig
+    #그래프 생성
+    ex1 = FusionCharts("bar2d", "ex1", "600", "400", "chart-1", "json", dataSource)
+
+    #2
+    #chartdata 선언
+    dataSource = OrderedDict()
+    dataSource["data"] = [] #chartdata는 json형식이다.
+    #data 값 넣기
+    class_object =Topic2021.objects.all()
+    for co in class_object:
+        dataSource["data"].append({"label": co.info, "value": co.status})
+    chartConfig = OrderedDict()
+    chartConfig["caption"] = "2021 정보원 중요도" #제목
+    chartConfig["subCaption"] = "2021년" #소제목
+    chartConfig["yaxisname"] = "중요도"
+    chartConfig["aligncaptionwithcanvas"] = "0"
+    chartConfig["plottooltext"] ="<b>$dataValue</b> leads received"
+    chartConfig["theme"] = "fusion" #테마
+    #그래프 특징 설정
+    dataSource["chart"] = chartConfig
+    #그래프 생성
+    ex2 = FusionCharts("bar2d", "ex2", "600", "400", "chart-2", "json", dataSource)
+
+    #3
+    #chartdata 선언
+    dataSource = OrderedDict()
+    dataSource["data"] = [] #chartdata는 json형식이다.
+    #data 값 넣기
+    class_object =Topic2022.objects.all()
+    for co in class_object:
+        dataSource["data"].append({"label": co.info, "value": co.status})
+    chartConfig = OrderedDict()
+    chartConfig["caption"] = "2022 정보원 중요도" #제목
+    chartConfig["subCaption"] = "2022년" #소제목
+    chartConfig["yaxisname"] = "중요도"
+    chartConfig["aligncaptionwithcanvas"] = "0"
+    chartConfig["plottooltext"] ="<b>$dataValue</b> leads received"
+    chartConfig["theme"] = "fusion" #테마
+    #그래프 특징 설정
+    dataSource["chart"] = chartConfig
+    #그래프 생성
+    ex3 = FusionCharts("bar2d", "ex3", "600", "400", "chart-3", "json", dataSource)
+
+    #4
+    #chartdata 선언
+    print("--------------------", )
+    dataSource = OrderedDict()
+    dataSource["categories"] = [] #chartdata는 json형식이다.
+    dataSource["dataset"]=[]
+    #값 넣기 위해 잠시 만든 것
+    data = OrderedDict()
+    data["data"] = [] 
+    data['category']=[{"label": "경제"}, {"label": "정치"}, {"label": "문화"}, {"label": "국제"}]
+    #data 값 넣기
+    class_object = TopicChange.objects.all()
+    for co in class_object:
+        data["data"]=[{"value": co.economy}, {"value": co.politics}, {"value": co.culture}, {"value": co.inter}]
+        if co.year=='2020':
+            dataSource["dataset"].append({"seriesname": "2020년", "data": data["data"]})
+        elif co.year=='2021':
+            dataSource["dataset"].append({"seriesname": "2021년", "data": data["data"]})
+        elif co.year=='2022':
+            dataSource["dataset"].append({"seriesname": "2022년", "data": data["data"]})
+        data["data"] = [] #chartdata는 json형식이다.
+
+    
+    dataSource["categories"].append({"category": data["category"]})
+
+    chartConfig = OrderedDict()
+    chartConfig["caption"] = "연도별 분야별 정보원 수의 변화" #제목
+    chartConfig["xAxisName"] = "분아별" #x축 이름
+    chartConfig["yAxisName"] = "정보원 수" #y축 이름
+    chartConfig["theme"] = "fusion" #테마
+    #그래프 특징 설정
+    dataSource["chart"] = chartConfig
+    #그래프 생성
+    ex4 = FusionCharts("msline", "ex4", "600", "400", "chart-4", "json", dataSource)
+
+    datadata=[
+        {
+            "x": "IT",
+            "value": 590000000,
+            "category": "Sino-Tibetan"
+        }]
+    context = {'output': ex1.render(), 'output_2': ex2.render(), 'output_3': ex3.render(), 'output_4': ex4.render(), 'datadata':datadata}
+    return render(request, 'single_pages/paper2.html', context) #render

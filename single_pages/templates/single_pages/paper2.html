@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+{% load static %}
+
+
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title> Second Project </title>
+
+    <link rel="stylesheet" href="{% static 'blog/bootstrap/bootstrap.min.css' %}" media="screen">
+    <link rel="stylesheet" href="{% static 'single_pages/css/about_me.css' %}" media="screen">
+    <script src="https://kit.fontawesome.com/726bbd6862.js" crossorigin="anonymous"></script>
+    <!--first-->
+    <script type="text/javascript" src="{% static 'fusioncharts/fusioncharts.js' %}"></script>
+    <script type="text/javascript" src="{% static 'fusioncharts/fusioncharts.charts.js' %}"></script>
+    <script type="text/javascript" src="{% static 'fusioncharts/themes/fusioncharts.theme.fusion.js' %}"></script>
+   
+    <!--#second--> 
+    <script type="text/javascript" src="https://cdn.fusioncharts.com/fusioncharts/latest/fusioncharts.js"></script>
+    <script type="text/javascript" src="https://cdn.fusioncharts.com/fusioncharts/latest/themes/fusioncharts.theme.fusion.js"></script>
+
+    <script src="https://cdn.anychart.com/releases/v8/js/anychart-base.min.js"></script>
+    <script src="https://cdn.anychart.com/releases/v8/js/anychart-tag-cloud.min.js"></script>
+    <script type="text/javascript" src="{% static 'single_pages/js/wordcloud.js' %}"></script>
+
+</head>
+<body>
+
+{% include 'blog/navbar.html' %}
+<section>
+    <div class="container mt-4">
+        <a href="{% static 'single_pages/file/논문 내용.docx' %}" class="btn btn-outline-dark" role="button" download>Download: 논문</a>
+        <br><br>
+        <details>
+            <summary><span style = " font-size:2.0em;">반도체</span></summary>
+            {% include 'single_pages/p2chapter1.html' %}
+        </details>
+        
+    </div>
+</section>
+<br><br>
+
+<section class="bg-light margin-for-footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h1>PORTFOLIO</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="card" data-toggle="modal" data-target="#pycon2017">
+                    <div class="card-body">
+                        <h5 class="card-title">반도체 산업인력 전망</h5>
+                        <p>반도체 산업 인력 전망 내용</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4">
+                <div class="card" data-toggle="modal" data-target="#inflearn_django2">
+                    <div class="card-body">
+                        <h5 class="card-title">K-반도체 벨트</h5>
+                        <p>K-반도체 벨트 구축 내용</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<!-- Modal -->
+<div class="modal fade" id="pycon2017" tabindex="-1" role="dialog" aria-labelledby="pycon2017ModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="pycon2017ModalLabel">반도체 산업인력 전망</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-lg-7">
+                        <img class="img-fluid" src="{% static 'single_pages/images/semistudy.jpg' %}">
+                    </div>
+                    <div class="col-lg-5">
+                        <p>반도체 산업인력 전망 내용</p>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="inflearn_django2" tabindex="-1" role="dialog" aria-labelledby="inflearnDjangoModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id=" inflearnDjangoModalLabel">K-반도체 벨트</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-lg-7">
+                        <img class="img-fluid" src="{% static 'single_pages/images/k_semi.jpg' %}">
+                    </div>
+                    <div class="col-lg-5">
+                        <p>K-반도체 벨트 구축 내용</p>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
+
+</body>
+</html>

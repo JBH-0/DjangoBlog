@@ -1,0 +1,39 @@
+{% load static %}
+<div class="col-lg-8">
+    <h1>반도체 주제어</h1>
+    <br/>
+    <p class="lead">
+        <b>첫번째, 반도체 정보원 중요도</b>
+    </p>
+    반도체 정보원 중요도 반도체 정보원 중요도 반도체 정보원 중요도
+    <div style="font-family: 'Helvetica Neue', Arial; font-size: 16px">
+        <div id="chart-1">{{ output|safe }}</div>
+        <br>
+    </div>
+    <div style="font-family: 'Helvetica Neue', Arial; font-size: 16px">
+        <div id="chart-2">{{ output_2|safe }}</div>
+        <br>
+    </div>
+    <div style="font-family: 'Helvetica Neue', Arial; font-size: 16px">
+        <div id="chart-3">{{ output_3|safe }}</div>
+        <br>
+    </div>
+    <div style="font-family: 'Helvetica Neue', Arial; font-size: 16px">
+        <div id="chart-4">{{ output_4|safe }}</div>
+        <br>
+    </div>
+    <br><br>
+    
+    <div class="chart-area">
+        2020년 주제어 중요도
+        <div id="container" style="width:100%; height:100%;"></div>
+    </div>
+    <div class="chart-area">
+        2021년 주제어 중요도
+        <div id="container2" style="width:100%; height:100%;"></div>
+    </div>
+    <div class="chart-area">
+        2022년 주제어 중요도
+        <div id="container3" style="width:100%; height:100%;"></div>
+    </div>
+<br><br><br>

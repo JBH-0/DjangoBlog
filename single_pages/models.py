@@ -73,3 +73,27 @@ class WorldSemiImExport(models.Model):
     export = models.IntegerField()
     Simport = models.IntegerField()
     both = models.FloatField()
+
+
+#2020 정보원 중요도
+class Topic2020(models.Model):
+    info = models.CharField(max_length=30)
+    status = models.IntegerField()
+
+#2021 정보원 중요도
+class Topic2021(models.Model):
+    info = models.CharField(max_length=30)
+    status = models.IntegerField()
+
+#2022 정보원 중요도
+class Topic2022(models.Model):
+    info = models.CharField(max_length=30)
+    status = models.IntegerField()
+
+#정보원 수 변화
+class TopicChange(models.Model):
+    year = models.CharField(max_length=30)
+    economy = models.IntegerField()
+    politics = models.IntegerField()
+    culture = models.IntegerField()
+    inter = models.IntegerField()
