@@ -40,7 +40,6 @@ INSTALLED_APPS = [
 
     'crispy_forms',
     'markdownx',
-
     #'social_django',
     'django.contrib.sites',
 
@@ -69,7 +68,7 @@ ROOT_URLCONF = 'DjangoBlog.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'templates'), os.path.join(BASE_DIR, 'templates', 'accounts')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

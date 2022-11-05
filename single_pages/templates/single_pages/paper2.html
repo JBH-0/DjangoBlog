@@ -35,14 +35,37 @@
             <!--<div class="card" data-toggle="modal" data-target="#inflearn_django2">
                 <input type="button" value="he">
             </div> -->
-            <a href="{% static 'single_pages/file/미중 공급망 분열과 한국의 선택에 따른 영향 및 대처방안에 대한 연구.pdf' %}" class="btn btn-outline-dark" role="button" download>Download: 논문</a>
+            <a href="{% static 'single_pages/file/졸업논문양식(표지 본문)_황헤링.pdf' %}" class="btn btn-outline-dark" role="button" download>Download: 논문</a>
         </div>
         <br><br>
         <details>
-            <summary><span style = " font-size:2.0em;">반도체</span></summary>
+            <summary><span style = " font-size:2.0em;">문제제기</span></summary>
             {% include 'single_pages/p2chapter1.html' %}
         </details>
-        
+        <details>
+            <summary><span style = " font-size:2.0em;">이론적 배경</span></summary>
+            {% include 'single_pages/p2chapter2.html' %}
+        </details>
+        <details>
+            <summary><span style = " font-size:2.0em;">연구 문제 및 연구 방법</span></summary>
+            {% include 'single_pages/p2chapter3.html' %}
+        </details>
+        <details>
+            <summary><span style = " font-size:2.0em;">연구 결과</span></summary>
+            {% include 'single_pages/p2chapter4.html' %}
+        </details>
+        <details>
+            <summary><span style = " font-size:2.0em;">요약 및 시사점</span></summary>
+            {% include 'single_pages/p2chapter5.html' %}
+        </details>
+        <details>
+            <summary><span style = " font-size:2.0em;">부록</span></summary>
+            {% include 'single_pages/p2graph.html' %}
+        </details>
+        <details>
+            <summary><span style = " font-size:2.0em;">참고문헌</span></summary>
+            {% include 'single_pages/p2reference.html' %}
+        </details>
     </div>
 </section>
 <br><br>

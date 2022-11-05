@@ -1,0 +1,67 @@
+{% load static %}
+<div class="col-lg-8">
+    <p class="lead">
+        <b>표1. TSMC 보도 연결정도 중앙성(중요도) 상위 20위권 정보원 (2020년~2022년 9월)</b>
+    </p>
+    <img class="card-img-top" src="{% static 'single_pages/images/table1.jpg' %}" style="width:400px; height:400px;">
+   
+    <br>
+    <div style="font-family: 'Helvetica Neue', Arial; font-size: 16px">
+        <div id="chart-1">{{ output|safe }}</div>
+        <br>
+    </div>
+    <div style="font-family: 'Helvetica Neue', Arial; font-size: 16px">
+        <div id="chart-2">{{ output_2|safe }}</div>
+        <br>
+    </div>
+    <div style="font-family: 'Helvetica Neue', Arial; font-size: 16px">
+        <div id="chart-3">{{ output_3|safe }}</div>
+        <br>
+    </div>
+    
+    <p class="lead">
+        <b>표2. TSMC 보도 연결정도 중앙성(중요도) 상위 20위권 주제어 (2020년~2022년 9월)</b>
+    </p>
+    
+    <img class="card-img-top" src="{% static 'single_pages/images/table2.jpg' %}" style="width:600px; height:500px;">
+    <br><br>
+    <div class="chart-area">
+        <h5>2020년 주제어 중요도</h5>
+        <div id="container" style="width:100%; height:100%;"></div>
+    </div>
+    <div class="chart-area">
+        <h5>2021년 주제어 중요도</h5>
+        <div id="container2" style="width:100%; height:100%;"></div>
+    </div>
+    <div class="chart-area">
+        <h5>2022년 주제어 중요도</h5>
+        <div id="container3" style="width:100%; height:100%;"></div>
+    </div>
+    <br><br>
+
+    <div style="font-family: 'Helvetica Neue', Arial; font-size: 16px">
+        <div id="chart-4">{{ output_4|safe }}</div>
+        <br>
+    </div>
+    <br><br>
+
+    <p class="lead">
+        <b>그림1. 2020년 중국_화웨이 주제어-정보원 연결망</b>
+    </p>
+    
+    <img class="card-img-top" src="{% static 'single_pages/images/analysis1.jpg' %}" style="width:900px; height:600px;">
+    <br><br>
+
+    <p class="lead">
+        <b>그림2. 2020년 안기현_박재근 정보원-주제어 연결망</b>
+    </p>
+    
+    <img class="card-img-top" src="{% static 'single_pages/images/analysis2.jpg' %}" style="width:1000px; height:600px;">
+    <br><br>
+
+    <p class="lead">
+        <b>그림3. 2020년 조바이든 대통령_윤석열 대통령 정보원-주제어 연결망</b>
+    </p>
+    
+    <img class="card-img-top" src="{% static 'single_pages/images/analysis3.jpg' %}" style="width:900px; height:600px;">
+    <br><br>

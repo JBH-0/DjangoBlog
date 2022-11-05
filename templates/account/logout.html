@@ -1,0 +1,71 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="/static/blog/bootstrap/bootstrap.min.css" media="screen">
+    <script src="https://kit.fontawesome.com/726bbd6862.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/static/allauth/signin.css" media="screen">
+    <title>Sign Out</title>
+    
+    
+</head>
+<body>
+
+<div class="container">
+
+
+    
+
+
+        <div class="row">
+            <div class="col-lg-6 col-md-12 mx-auto">
+
+                
+
+                <strong>Menu:</strong>
+                <ul class="nav">
+                    
+                        <li class="nav-item"><a class="nav-link active" href="/accounts/email/">Change E-mail</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="/accounts/logout/">Sign Out</a></li>
+                    
+                </ul>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-6 col-md-12 mx-auto">
+                <div class="card">
+                    <div class="card-body">
+                        
+<h3 class="card-title">Sign Out</h3>
+
+<p>Are you sure you want to sign out?</p>
+
+<form method="post" action="/accounts/logout/">{% csrf_token %}
+  <input type="hidden" name="csrfmiddlewaretoken" value="3NmFEQPVr4W2LlpOM0qetTqWDk2EcsOeoQHjXdqiPM1OrP61K50c0cbcD32lQQp9">
+  
+  <button class="btn btn-primary float-right" type="submit">Sign Out</button>
+</form>
+
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+</div>
+
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
